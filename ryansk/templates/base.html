@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../dlf/styles.css" />
+    <script language="javascript" type="text/javascript">
+    <!--
+    function o(n, i) {
+      document.images['thumb'+n].src = '../dlf/i.php?f='+i;
+    }
+
+    function f(n) {
+	  document.images['thumb'+n].src = '../dlf/trans.gif';
+    }
+    //-->
+    </script>
+
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>SLAYER SUP IF UR DER AND KID IF UR DER</title>
+    {% endif %}
+  </head>
+  <body>
+    <div><a href="/upload">Upload</a> <a href="/browse">Browse</a></div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>

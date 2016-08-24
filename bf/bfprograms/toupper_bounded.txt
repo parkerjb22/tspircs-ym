@@ -1,0 +1,21 @@
+
+
+read the first char this will act like a do while
+,
+
+
+    make 2 copies of it
+    [>+>+<<-]
+
+    skip over the copies
+    >.>.>.
+
+    create a 64
+    >>++++[<++++[<++++>-]>-]<<.
+
+
+
+
+
+
+

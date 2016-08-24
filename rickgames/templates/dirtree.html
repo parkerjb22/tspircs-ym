@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="container">
+  <h1>Directory Listing</h1>
+  <div id="listingcontainer">
+    <div id="listingheader">
+	<div id="headerfile"><a href="/browse/index.php?dir=&amp;sort=name&amp;order=asc">File</a></div>
+	<div id="headersize"><a href="/browse/index.php?dir=&amp;sort=size&amp;order=asc">Size</a></div>
+	<div id="headermodified"><a href="/browse/index.php?dir=&amp;sort=date&amp;order=asc">Last Modified</a></div>
+	</div>
+    <div id="listing">
+
+{%- for item in tree.children recursive %}
+    <div>
+        <a href="{{ item.path }}" class="b" onmouseover="o(0, '{{ item.path }}');" onmouseout="f(0);">
+            <img src="../dlf/jpg.gif" alt="{{ item.name }}" />
+            <strong>{{ item.name }}</strong>
+            <em>89KB</em> Jun 23 2016 12:27:17 PM
+            <span>
+                <img src="../dlf/trans.gif" alt="{{ item.name }}" name="thumb0" />
+            </span>
+        </a>
+    </div>
+{%- endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
