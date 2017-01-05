@@ -13,13 +13,10 @@
 
 {%- for item in tree.children recursive %}
     <div>
-        <a href="{{ item.path }}" class="b" onmouseover="o(0, '{{ item.path }}');" onmouseout="f(0);">
+        <a href="{{ item.path }}" class="b">
             <img src="../dlf/jpg.gif" alt="{{ item.name }}" />
             <strong>{{ item.name }}</strong>
-            <em>89KB</em> Jun 23 2016 12:27:17 PM
-            <span>
-                <img src="../dlf/trans.gif" alt="{{ item.name }}" name="thumb0" />
-            </span>
+            <em>{{ item.size }}</em> {{ item.time }}
         </a>
     </div>
 {%- endfor %}
