@@ -1,0 +1,3 @@
+Find What: ^\s+private\s(\w+)\s\_(\w+);
+
+Replace With: @Override public \1 get\u\2 () { return _\2; } @Override  public void set\u\2 (\1 \2) { _\2 = \2; }
